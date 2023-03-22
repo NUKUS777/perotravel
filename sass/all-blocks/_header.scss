@@ -1,0 +1,188 @@
+header {
+    background-image: url(/images/backgrounimg.png);
+    background-size: cover;
+    width: 100%;
+    min-height: 789px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 70px;
+}
+.navbar {
+    @include flex;
+    padding: 27px 0;
+    &__menu {
+        @include flex;
+        column-gap: 20px;
+        transition: 1s;
+        &-link {
+            text-decoration: none;           
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            transition: 1s;
+            @include tablet {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 44px;
+            }
+        }
+        &-item {
+            list-style: none;
+            transition: 1s;
+
+        }
+        @include tablet {
+            padding-top: 70PX;
+           position: absolute;
+           align-items: center;
+           justify-content: unset;
+           row-gap: 40px;
+           right: -100%;
+           top: 90px;
+           flex-direction: column;
+           row-gap: 30px;
+           width: 100%;
+           height: 700px;
+           z-index: 4;
+           background-color: rgba(62, 61, 61, 0.898);
+        }
+    }
+}
+.navbar__menu-link:hover {
+    color: rgba(235, 200, 28, 0.89);
+    transform: scale(1.1);
+}
+.navbar__menu-item:hover {
+    transform: scale(1.1);
+}
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 30px;
+    @include tablet {
+        display: block;
+    }
+    &__span {
+        width: 40px;
+        height: 5px;
+        background-color:white;
+        margin-top: 5px;
+        transition: 0.3s;
+    }
+}
+.navbar__menu.active {
+    right: 0px;
+}
+.hamburger.active .hamburger__span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .hamburger__span:nth-child(1){
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active .hamburger__span:nth-child(3){
+    transform: translateY(-10px) rotate(-45deg);
+}
+.hero {
+    position: relative;
+    padding: 152px 0 248px 0;
+    max-width: 100%;
+    @include mobile {
+       padding: 100px 0 ;
+    }
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 88px;
+        color: #FFFFFF;
+        @include tablet {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+        }
+        @include mobile {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+    &__title2 {           
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 117px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+        margin-bottom: 60px;
+        @include mobile {
+            font-weight: 900;
+            font-size: 72px;
+            line-height: 90%;
+        }
+
+    }
+    &__btn  {
+        width: 230px;
+        height: 50px;
+        background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+        border-radius: 60px;        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color:  $main-text-color;
+        transition: 1s;
+        border: none;
+    }
+    &__img {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        row-gap: 17px;
+        align-items: center;
+        justify-content: space-between;
+        right: 0;
+        top: 33%;
+        @include mobile {
+            top: 84%;
+         }
+    }
+    
+}
+.hero__btn:hover:hover {
+    transform: scale(1.1);
+}
+.img2 {
+    position: absolute;
+    bottom: -14%;
+    right: 0px;
+    display: flex;
+    column-gap: 20px;
+    @include tablet {
+        bottom: -7%;
+      }
+    &__left {
+        @include tablet {
+          width: 295px;
+        }
+        @include mobile {
+            width: 200px;
+          }
+    }
+    &__right {
+        @include tablet {
+          width: 125px;
+        }
+        @include mobile {
+            width: 85px;
+          }
+    }
+}

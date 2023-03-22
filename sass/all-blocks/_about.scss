@@ -1,0 +1,61 @@
+.about {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    height: 750px;
+    &__left {
+        position: absolute;
+        width: 80%;
+        min-height: 749px;
+        left: 0;
+        top: 0;
+        background-image: url(/images/aboutbackgroundimg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include mobile{
+            min-height: 700px;
+            max-width:300px ;
+        }
+        @include tablet{
+            width: 504px;
+        }
+    }
+    &__right {
+        max-width: 540px;
+        padding: 61px 85px;
+        position: absolute;
+        top: 33%;
+        right: 40px;
+        background-color:#EDEDED;
+        @include tablet{
+            padding: 62px 52px;
+            max-width: 490px;
+            right: 10px;
+        }
+        @include mobile{
+            max-width: 340px;
+            padding: 43px;
+            right: 0;
+        }
+        &-title {
+            margin-bottom: 40px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #0499DD;
+        }
+        &-des {
+                        
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #282828;
+        }
+
+    }
+}

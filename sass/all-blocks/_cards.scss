@@ -1,0 +1,102 @@
+.card {
+    margin-top: 200px;
+    &__first {
+        width: 100%;
+        margin-bottom: 25px;
+        @include flex;
+        &-title{         
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #0499DD;
+        }
+        &-span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            text-decoration-line: underline;
+            color: #282828;
+        }
+    }
+    &__item:hover{
+        transform: scale(1.1);
+    }
+    &__item {
+        max-width: 450px;
+        padding: 211px 16px 42px 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 1s;
+        @include tablet {
+            padding: 40px 50px 30px 50px ;
+        }
+
+        &-des {
+            
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #FFFFFF;
+            margin: 40px 0 32px 0;
+            transition: 1s;
+
+        }
+        &-title {                        
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFC700;
+            transition: 1s;
+
+        }
+        &-btn {
+            width: 160px;
+            height: 40px;
+            background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+            border-radius: 40px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #FFFFFF;
+            transition: 1s;
+        }
+        &-btn:hover {
+            transform: scale(1.1)
+        }
+        &-title:hover {
+            transform: scale(1.1)
+        }
+        &-des:hover {
+            transform: scale(1.1)
+        }
+    }
+    &__bar {
+        @include flex;
+        column-gap: 10px;
+        @include tablet{
+            flex-direction: column;
+            row-gap: 30px;
+
+        }
+    }
+}
+.card .card__item:nth-child(1){
+    background-image: url(/images/Rectangle\ 13.png);
+}
+.card .card__item:nth-child(2){
+    background-image: url(/images/Rectangle\ 13\ \(1\).png);
+}
+.card .card__item:nth-child(3){
+    background-image: url(/images/Rectangle\ 13\ \(2\).png);
+}
